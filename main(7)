@@ -4,8 +4,9 @@ class Animal:
     def __init__(self):
         Animal._count += 1
 
+    @staticmethod
     def get_count():
-        return Animal._count
+        return f"Создано экземпляров: {Animal._count}"
     
 class Dog(Animal):
     def voice(self):
@@ -27,4 +28,4 @@ print(dog.voice())
 print (cat.voice())
 print (cow.voice())
 
-print(f"Количество созданных экземпляров: {Animal.get_count()}")
+print(Animal.get_count())
